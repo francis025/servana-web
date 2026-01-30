@@ -66,9 +66,10 @@ const nextConfig = {
   },
 };
 
-// Static export mode
-if (process.env.NEXT_PUBLIC_ENABLE_SEO === "false") {
-  nextConfig.output = "export";
-}
+// Static export mode - DISABLED for Railway deployment
+// Railway requires server mode, not static export
+// if (process.env.NEXT_PUBLIC_ENABLE_SEO === "false") {
+//   nextConfig.output = "export";
+// }
 
 export default nextConfig;
